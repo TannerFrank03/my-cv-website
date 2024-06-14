@@ -157,6 +157,78 @@ button:hover {
     background-color: #FF5733; /* Accent color */
 }
 
+/* Progress Bar Styles */
+.progress-bar {
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 20px;
+    background-color: #007BFF;
+    width: 0;
+    transition: width 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode .container {
+    background-color: rgba(20, 20, 20, 0.9);
+}
+
+body.dark-mode .header-content, body.dark-mode h2, body.dark-mode .contact ul li a {
+    color: #f0f0f0;
+}
+
+body.dark-mode .progress {
+    background-color: #FF5733; /* Accent color */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+form label {
+    font-size: 1rem;
+    color: #f0f0f0;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+form button {
+    width: 100px;
+    align-self: flex-start;
+}
+
+/* Social Media Icons */
+.social-media img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+
 /* Media Queries for Responsive Design */
 @media (min-width: 600px) {
     .header-content {
