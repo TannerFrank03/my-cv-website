@@ -2,14 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #f0f0f0;
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
+    background-color: #000; /* Default background color */
 }
 
 .video-background {
@@ -49,24 +54,26 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
 }
 
 /* Header Styles */
 header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
-    background-color: #007BFF; /* Primary color */
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    color: #f0f0f0;
     padding: 10px;
     border-radius: 8px;
 }
 
 .header-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
 }
@@ -78,28 +85,31 @@ header {
     object-fit: cover;
     object-position: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border: 3px solid #fff;
+    border: 3px solid #f0f0f0;
 }
 
 .header-text h1 {
     margin: 0;
     font-size: 2em;
-    color: #fff;
+    color: #f0f0f0;
+    text-align: center;
 }
 
 .header-text h2 {
     margin: 0;
     font-size: 1.2em;
-    color: #e0e0e0;
+    color: #ccc;
+    text-align: center;
 }
 
 h2 {
-    color: #007BFF;
-    border-bottom: 2px solid #e0e0e0;
+    color: #f0f0f0;
+    border-bottom: 2px solid #444;
     padding-bottom: 5px;
     margin-bottom: 15px;
     cursor: pointer;
     transition: color 0.3s, border-color 0.3s;
+    text-align: center;
 }
 
 h2:hover {
@@ -145,4 +155,28 @@ button {
 
 button:hover {
     background-color: #FF5733; /* Accent color */
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 600px) {
+    .header-content {
+        flex-direction: row;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-text h1 {
+        text-align: left;
+    }
+
+    .header-text h2 {
+        text-align: left;
+    }
+
+    h2 {
+        text-align: left;
+    }
 }
